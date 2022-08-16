@@ -37,16 +37,19 @@ int smallest(int *array, size_t k, size_t size)
 
 void selection_sort(int *array, size_t size)
 {
-	size_t k;
+	size_t k, pos;
 
-	int temp, pos;
+	int temp;
 
 	for (k = 0; k < size; k++)
 	{
 		pos = smallest(array, k, size);
-		temp = array[k];
-		array[k] = array[pos];
-		array[pos] = temp;
-		print_array(array, size);
+		if (k != pos)
+		{
+			temp = array[k];
+			array[k] = array[pos];
+			array[pos] = temp;
+			print_array(array, size);
+		}
 	}
 }
