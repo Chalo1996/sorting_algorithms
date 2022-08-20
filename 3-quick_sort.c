@@ -16,33 +16,33 @@ size_t partition(int *arr, ssize_t low, ssize_t high, size_t size)
 	int pivot, temp;
 	ssize_t j, i;
 
-	j = low - 1;
+	j = low;
 	pivot = arr[high];
 
 	for (i = low; i < high; i++)
 	{
 		if (arr[i] < pivot)
 		{
-			j++;
 			if (i != j)
 			{
 				temp = arr[i];
 				arr[i] = arr[j];
 				arr[j] = temp;
+				j++;
 				print_array(arr, size);
 			}
 		}
 	}
 
-	if (arr[j + 1] > arr[high])
+	if (arr[j] > arr[high])
 	{
-		temp = arr[j + 1];
-		arr[j + 1] = arr[high];
+		temp = arr[j];
+		arr[j] = arr[high];
 		arr[high] = temp;
 		print_array(arr, size);
 	}
 
-	return (j + 1);
+	return (j);
 }
 
 /**
