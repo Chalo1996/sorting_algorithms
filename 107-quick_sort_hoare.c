@@ -17,6 +17,7 @@ size_t partition(int *arr, ssize_t low, ssize_t high, size_t size)
 	ssize_t loc;
 
 	loc = low;
+	flag = 0;
 
 	while (flag != 1)
 	{
