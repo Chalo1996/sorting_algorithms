@@ -22,9 +22,7 @@ size_t partition(int *arr, ssize_t low, ssize_t high, size_t size)
 	while (flag != 1)
 	{
 		while ((arr[loc] < arr[high]) && (loc != high))
-		{
 			high--;
-		}
 		if (loc == high)
 			flag = 1;
 
