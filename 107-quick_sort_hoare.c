@@ -2,7 +2,8 @@
 
 
 /**
-  * partition - partitions the array into two.
+  * partition - partitions the array using Hoare's
+  *             partion scheme.
   * @arr: array to partition.
   * @low: index zero.
   * @high: last index.
@@ -78,7 +79,7 @@ void quick_sort_algo(int *arr, ssize_t low, ssize_t high, size_t size)
 /**
   * quick_sort_hoare -  sorts an array of integers in ascending
   *               order using the Quick sort algorithm. This
-  *               algorithm uses the Lomuto partion schema.
+  *               algorithm uses the Hoare's partion scheme.
   * @array: The array to sort.
   * @size: The number of elements.
   *
